@@ -10,7 +10,7 @@ public class Variables {
         b = 30;
         suma = a + b;
         
-        System.out.println("La suma es: " + suma);
+        System.out.println("La suma es:  " + suma);
     }
     
 }
