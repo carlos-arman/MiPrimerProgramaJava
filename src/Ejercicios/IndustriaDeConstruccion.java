@@ -5,6 +5,9 @@ ocasionesel  empleado  tiene  que  trabajar  horas extras
 para cumplir con su trabajo. En el mes a acumulado 50 horas
 extras que se la pagan al 10% del valor del pago diario. 
 ¿Cuánto ganara el trabajador al final de un mes de trabajo? 
+
+Tomar en consideración que al trabajador le descontaran
+el 10% en concepto de renta.
 */
 package Ejercicios;
 
@@ -20,10 +23,21 @@ public class IndustriaDeConstruccion {
         double HorasExtras = 50;
         double ValorDePago = 0.10;
         double DiasTrabajados;
+        double Renta = 0.10 ;
+        double salariototal;
+        double DRenta;
+        double SalarioD;
         
         System.out.println("Digite los dias Trabajados: ");
         DiasTrabajados = Dias.nextDouble();
         
-        System.out.println("Salario Final del Trabajador es: $" + SueldoDiario * DiasTrabajados  * ValorDePago * HorasExtras);
+        salariototal = SueldoDiario * DiasTrabajados  * ValorDePago * HorasExtras;
+        DRenta = Renta * salariototal;
+        
+        System.out.println("Renta total a descontar: $" + DRenta);
+        
+        SalarioD = salariototal - DRenta;
+        
+        System.out.println("EL salario total del mes es: $" + SalarioD);
     }
 }
