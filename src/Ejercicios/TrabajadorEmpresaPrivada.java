@@ -12,12 +12,16 @@ package Ejercicios;
  */
 public class TrabajadorEmpresaPrivada {
     public static void main(String[] args){
-        double AFPTrabajador, AFPEmpleador, Trabajador, Empleado;
+        double AFPTrabajador, AFPEmpleador, Empleador, Empleado;
         
         AFPTrabajador = 0.06;
         AFPEmpleador = 0.065;
-        Empleado = 500;
+        double SalarioTotal = 500;
+        Empleado = SalarioTotal * AFPTrabajador;
+        Empleador = SalarioTotal * AFPEmpleador;
         
+        System.out.println("El total de AFP de Trabajador es: $" +Empleado);
+        System.out.println("El total de AFP de Empleador es: $" + Empleador);
         
         
         
